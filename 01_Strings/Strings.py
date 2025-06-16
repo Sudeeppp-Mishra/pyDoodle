@@ -72,3 +72,16 @@ print("\n")
 print("example" not in txt)
 if "true" not in txt:
     print("No, 'true' is NOT present")
+    
+    
+############################
+# Strings Concatenation
+############################
+# strings are concatenated with + operator
+a = "hi"
+b = "bye"
+c = a + b
+print(c)
+
+c = a + " " + b
+print(c)
