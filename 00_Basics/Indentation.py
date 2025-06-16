@@ -7,7 +7,7 @@
 
 #Example:
 if 5>2:
-    print(5,"is greater than",2);
+    print(5,"is greater than",2); # NOTE: in print() function, we output multiple variables or values by separating with a comma
    
     
 # Python will give you an error if you skip the indentation:
