@@ -29,3 +29,5 @@ print(f'a<<=b is {a}')
 a>>=b # right shift
 
 print(a:=2) # a=2 and print(a)
+
+#NOTE: logical AND: and(keyword), logical OR: or(keyword), logical NOT: not(keyword)
