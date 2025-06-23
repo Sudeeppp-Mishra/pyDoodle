@@ -1,6 +1,6 @@
-# 🌀 Random.py
+# 🌀 pyDoodle
 
-Welcome to `Random.py` — a messy, magical space where I explore Python, one file at a time.
+Welcome to `pyDoodle` — a messy, magical space where I explore Python, one file at a time.
 
 This repo is not about perfection.  
 It's about practice, curiosity, and figuring things out as I go.  
