@@ -21,3 +21,7 @@ From core Python to NumPy, pandas, and whatever else catches my interest.
 More structure may (or may not 😄) come later.
 
 Feel free to peek around!
+
+## 📚 References
+
+- Most theory and code examples in this repository are inspired by or adapted from [W3Schools Python Tutorial](https://www.w3schools.com/python/)
