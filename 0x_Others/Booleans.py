@@ -4,7 +4,7 @@ print(10>8)
 print(10==8)
 print(10<8)
 
-# Evaluate any alue by using bool() function, it gives you True or False in return
+# Evaluate any value by using bool() function, it gives you True or False in return
 
 print("\n")
 print(bool("Hello"))

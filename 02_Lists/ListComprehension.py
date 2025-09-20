@@ -1,4 +1,4 @@
-# Offers a shorter syntax when we want to create a new list based on teh values of aan existing list
+# Offers a shorter syntax when we want to create a new list based on the values of an existing list
 
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = []

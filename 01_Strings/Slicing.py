@@ -14,7 +14,7 @@ print(b[1:])
 ############################
 # Negative Indexing
 ############################
-# Use negative indexes to start the slice from the end of the sting:
+# Use negative indexes to start the slice from the end of the string:
 
 # ex:
 # "Hello": here `o` is in -1 index from back and `e` is in -4
