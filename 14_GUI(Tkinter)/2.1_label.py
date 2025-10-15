@@ -2,7 +2,6 @@ from tkinter import *
 from PIL import Image, ImageTk
 
 window = Tk()
-window.geometry('320x320')
 
 # Open and resize image
 img = Image.open("/Users/sudeepdemishra/Documents/Random.py/14_GUI(Tkinter)/logo.png")
