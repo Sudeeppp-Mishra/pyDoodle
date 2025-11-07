@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QMainWindow, QToolBar
-from PySide6.QtGui import QAction
+from PySide6.QtGui import QAction, QIcon
 from PySide6.QtCore import QSize
 
 class MainWindow(QMainWindow):
@@ -71,5 +71,12 @@ class MainWindow(QMainWindow):
         action1.triggered.connect(self.toolbar_button_click)
         toolbar.addAction(action1)
         
+        
+        action2 = QAction(QIcon("icon.png"), "Some other action", self)
+        action2.setStatusTip("Status message for some other action")
+        action2.triggered.connect(self.toolbar_button_click)
+        action2.setCheckable(True)
+        toolbar.addAction(action2)
+        
     def toolbar_button_click(self):
-        print("action 1 triggered")
+        print("action triggered")
