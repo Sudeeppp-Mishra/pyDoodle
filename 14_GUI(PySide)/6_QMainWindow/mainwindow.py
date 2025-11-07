@@ -36,3 +36,22 @@ class MainWindow(QMainWindow):
         edit_menu.addAction(undo_action)
         redo_action = QAction("Redo", self)
         edit_menu.addAction(redo_action)
+        
+        window_menu = menu_bar.addMenu("Window")
+        settings_menu = menu_bar.addMenu("Setting")
+        help_menu = menu_bar.addMenu("Help")
+        
+                # ----- Dummy actions -----
+        # These do nothing, but they force macOS to show the menu.
+
+        dummy_win = QAction(" ", self)      # blank action
+        dummy_win.setEnabled(False)         # make it unclickable
+        window_menu.addAction(dummy_win)
+
+        dummy_set = QAction(" ", self)
+        dummy_set.setEnabled(False)
+        settings_menu.addAction(dummy_set)
+
+        dummy_help = QAction(" ", self)
+        dummy_help.setEnabled(False)
+        help_menu.addAction(dummy_help)
