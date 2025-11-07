@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QToolBar, QPushButton
+from PySide6.QtWidgets import QMainWindow, QToolBar, QPushButton, QStatusBar
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtCore import QSize
 
@@ -81,5 +81,9 @@ class MainWindow(QMainWindow):
         toolbar.addSeparator()
         toolbar.addWidget(QPushButton("Click here"))
         
+        # Working with status bars
+        self.setStatusBar(QStatusBar(self))
+        
     def toolbar_button_click(self):
         print("action triggered")
+        self.statusBar().showMessage("Message from my app", 3000) # 3000 ms timeout
