@@ -84,6 +84,14 @@ class MainWindow(QMainWindow):
         # Working with status bars
         self.setStatusBar(QStatusBar(self))
         
+        
+        button1 = QPushButton("Button 1")
+        button1.clicked.connect(self.button1_clicked)
+        self.setCentralWidget(button1)
+        
     def toolbar_button_click(self):
         print("action triggered")
         self.statusBar().showMessage("Message from my app", 3000) # 3000 ms timeout
+        
+    def button1_clicked(self):
+        print("CLICKED ON THE BUTTON")
