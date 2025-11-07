@@ -1,4 +1,4 @@
-# 🧠 PySide6 / PyQt — QMainWindow Notes
+# PySide6 / PyQt — QMainWindow Notes
 
 ---
 
