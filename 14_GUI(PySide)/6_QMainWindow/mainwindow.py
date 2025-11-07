@@ -24,3 +24,15 @@ class MainWindow(QMainWindow):
         file_menu.addAction(quit_action)
         quit_action.triggered.connect(self.close)
         
+        edit_menu = menu_bar.addMenu("Edit")
+        
+        copy_action = QAction("Copy", self)
+        edit_menu.addAction(copy_action)
+        cut_action = QAction("Cut", self)
+        edit_menu.addAction(cut_action)
+        paste_action = QAction("Paste", self)
+        edit_menu.addAction(paste_action)
+        undo_action = QAction("Undo", self)
+        edit_menu.addAction(undo_action)
+        redo_action = QAction("Redo", self)
+        edit_menu.addAction(redo_action)
