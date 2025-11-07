@@ -1,5 +1,6 @@
-from PySide6.QtWidgets import QApplication, QMainWindow
-from PySide6.QtGui import QAction, QKeySequence
+from PySide6.QtWidgets import QMainWindow, QToolBar
+from PySide6.QtGui import QAction
+from PySide6.QtCore import QSize
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -55,3 +56,20 @@ class MainWindow(QMainWindow):
         dummy_help = QAction(" ", self)
         dummy_help.setEnabled(False)
         help_menu.addAction(dummy_help)
+        
+        
+        # WORKING WITH TOOLBARS
+        toolbar = QToolBar("My main toolbar")
+        toolbar.setIconSize(QSize(20, 20))
+        self.addToolBar(toolbar)
+        
+        # Add the quit action to the toolbar
+        toolbar.addAction(quit_action)
+        
+        action1 = QAction("Some Action", self)
+        action1.setStatusTip("Status message for some action")
+        action1.triggered.connect(self.toolbar_button_click)
+        toolbar.addAction(action1)
+        
+    def toolbar_button_click(self):
+        print("action 1 triggered")
