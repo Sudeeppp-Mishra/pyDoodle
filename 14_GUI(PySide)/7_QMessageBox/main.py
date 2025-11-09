@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QVBoxLayout, QMessageBox
 
-class MainWindow(QWidget):
+class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         
@@ -29,6 +29,7 @@ class MainWindow(QWidget):
         self.initUI()
         
     def initUI(self):
+        self.setGeometry(700, 300, 300, 300)
         self.setWindowTitle("QMessageBox")
         
         self.vbox.addWidget(self.hard_way_button)
