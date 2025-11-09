@@ -1,26 +1,26 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QVBoxLayout, QMessageBox
 
-class MainWindow(QMainWindow):
+class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         
         self.hard_way_button = QPushButton("Hard Way", self)
         self.hard_way_button.clicked.connect(self.button_clicked_hard)
         
-        self.button_critical = QPushButton("Critical")
+        self.button_critical = QPushButton("Critical", self)
         self.button_critical.clicked.connect(self.button_clicked_critical)
         
-        self.button_question = QPushButton("Question")
+        self.button_question = QPushButton("Question", self)
         self.button_question.clicked.connect(self.button_clicked_question)
         
-        self.button_information = QPushButton("Information")
+        self.button_information = QPushButton("Information", self)
         self.button_information.clicked.connect(self.button_clicked_information)
         
-        self.button_warning = QPushButton("Warning")
+        self.button_warning = QPushButton("Warning", self)
         self.button_warning.clicked.connect(self.button_clicked_warning)
         
-        self.button_about = QPushButton("About")
+        self.button_about = QPushButton("About", self)
         self.button_about.clicked.connect(self.button_clicked_about)
         
         self.central_widget = QWidget()
