@@ -90,7 +90,7 @@ class MainWindow(QMainWindow):
             print("User choose Cancel!")
     
     def button_clicked_about(self):
-        ret = QMessageBox.about(self, "Message Title", "Some about Message!", QMessageBox.Ok | QMessageBox.Cancel)
+        ret = QMessageBox.about(self, "Message Title", "Some about Message!")
         if ret == QMessageBox.Ok:
             print("User choose Ok!")
         else:
