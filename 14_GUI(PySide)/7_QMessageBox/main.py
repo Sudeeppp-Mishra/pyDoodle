@@ -43,7 +43,21 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.central_widget)
         
     def button_clicked_hard(self):
-        pass
+        # QMessageBox using Hard way
+        message = QMessageBox()
+        message.setMinimumSize(700, 200)
+        message.setWindowTitle("Message")
+        message.setText("Something Happened!")
+        message.setInformativeText("Do you want to do something about it?")
+        message.setIcon(QMessageBox.Critical)
+        message.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        message.setDefaultButton(QMessageBox.Ok)
+        ret = message.exec()
+        
+        if ret == QMessageBox.Ok:
+            print("User choose Ok!")
+        else:
+            print("User choose Cancel!")
     
     def button_clicked_critical(self):
         pass
