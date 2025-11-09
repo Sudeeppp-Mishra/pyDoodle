@@ -76,7 +76,11 @@ class MainWindow(QMainWindow):
             print("User choose Cancel!")
     
     def button_clicked_information(self):
-        pass
+        ret = QMessageBox.information(self, "Message Title", "Some information!", QMessageBox.Ok | QMessageBox.Cancel)
+        if ret == QMessageBox.Ok:
+            print("User choose Ok!")
+        else:
+            print("User choose Cancel!")
     
     def button_clicked_warning(self):
         pass
