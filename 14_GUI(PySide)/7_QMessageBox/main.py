@@ -60,8 +60,13 @@ class MainWindow(QMainWindow):
         else:
             print("User choose Cancel!")
     
+    # Easier methods using static methods
     def button_clicked_critical(self):
-        pass
+        ret = QMessageBox.critical(self, "Message Title", "Critical Message!", QMessageBox.Ok | QMessageBox.Cancel)
+        if ret == QMessageBox.Ok:
+            print("User choose Ok!")
+        else:
+            print("User choose Cancel!")
     
     def button_clicked_question(self):
         pass
