@@ -52,6 +52,7 @@ class MainWindow(QMainWindow):
         message.setIcon(QMessageBox.Critical)
         message.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
         message.setDefaultButton(QMessageBox.Ok)
+        # Show the message box
         ret = message.exec()
         
         if ret == QMessageBox.Ok:
