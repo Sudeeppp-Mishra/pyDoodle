@@ -31,6 +31,7 @@ class Widget(QWidget):
         self.text_holder_label.setText(self.line_edit.text())
         
     def text_changed(self):
+        print("Text changed to ", self.line_edit.text())
         self.text_holder_label.setText(self.line_edit.text())
         
 app = QApplication(sys.argv)
