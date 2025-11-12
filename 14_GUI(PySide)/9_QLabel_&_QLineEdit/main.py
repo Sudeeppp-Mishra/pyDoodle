@@ -26,6 +26,7 @@ class Widget(QWidget):
         # self.line_edit.cursorPositionChanged.connect(self.cursor_position_changed)
         # self.line_edit.editingFinished.connect(self.editing_finished)
         self.line_edit.returnPressed.connect(self.return_pressed)
+        self.line_edit.selectionChanged.connect(self.selection_changed)
         
         self.setLayout(vbox)
         
@@ -45,6 +46,9 @@ class Widget(QWidget):
         
     def return_pressed(self): # it's kinda same as editing finished and it gets triggered after user presses enter
         print("Return pressed!")
+        
+    def selection_changed(self):
+        print("Selection changed: ", self.line_edit.selectedText()) # this returns the text we select in line edit field
         
         
 app = QApplication(sys.argv)
