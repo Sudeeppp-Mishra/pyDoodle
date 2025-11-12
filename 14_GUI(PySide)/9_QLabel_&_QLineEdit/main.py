@@ -23,6 +23,10 @@ class Widget(QWidget):
         
         self.setLayout(vbox)
         
+        # Slots
+        def button_clicked(self):
+            print("Fullname: ", self.line_edit.text())
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
