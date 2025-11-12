@@ -27,7 +27,7 @@ class Widget(QWidget):
         
     # Slots
     def button_clicked(self):
-        print("Fullname: ", self.line_edit.text())
+        self.text_holder_label.setText(self.line_edit.text())
         
 app = QApplication(sys.argv)
 widget = Widget()
