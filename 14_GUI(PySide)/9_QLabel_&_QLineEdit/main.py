@@ -27,6 +27,7 @@ class Widget(QWidget):
         # self.line_edit.editingFinished.connect(self.editing_finished)
         self.line_edit.returnPressed.connect(self.return_pressed)
         self.line_edit.selectionChanged.connect(self.selection_changed)
+        self.line_edit.textEdited.connect(self.text_edited)
         
         self.setLayout(vbox)
         
@@ -50,6 +51,8 @@ class Widget(QWidget):
     def selection_changed(self):
         print("Selection changed: ", self.line_edit.selectedText()) # this returns the text we select in line edit field
         
+    def text_edited(self, edited_new_text):
+        print("Text edited. New tex: ", edited_new_text)
         
 app = QApplication(sys.argv)
 widget = Widget()
