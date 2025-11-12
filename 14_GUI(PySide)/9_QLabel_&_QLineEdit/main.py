@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLay
 class Widget(QWidget):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle("QLabel and QLineEdit")
         
 app = QApplication(sys.argv)
 widget = Widget()
