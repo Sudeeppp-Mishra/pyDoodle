@@ -21,11 +21,13 @@ class Widget(QWidget):
         vbox.addWidget(button)
         vbox.addWidget(self.text_holder_label)
         
+        button.clicked.connect(self.button_clicked)
+        
         self.setLayout(vbox)
         
-        # Slots
-        def button_clicked(self):
-            print("Fullname: ", self.line_edit.text())
+    # Slots
+    def button_clicked(self):
+        print("Fullname: ", self.line_edit.text())
         
 app = QApplication(sys.argv)
 widget = Widget()
