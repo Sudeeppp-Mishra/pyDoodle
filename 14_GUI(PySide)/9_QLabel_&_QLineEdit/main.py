@@ -6,6 +6,10 @@ class Widget(QWidget):
         super().__init__()
         self.setWindowTitle("QLabel and QLineEdit")
         
+        # A set of signal we can connect to 
+        lable = QLabel("Fullname: ")
+        self.line_edit = QLineEdit()
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
