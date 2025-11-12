@@ -21,6 +21,8 @@ class Widget(QWidget):
         vbox.addWidget(button)
         vbox.addWidget(self.text_holder_label)
         
+        self.setLayout(vbox)
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
