@@ -22,7 +22,8 @@ class Widget(QWidget):
         vbox.addWidget(self.text_holder_label)
         
         button.clicked.connect(self.button_clicked)
-        self.line_edit.textChanged.connect(self.text_changed)
+        #self.line_edit.textChanged.connect(self.text_changed)
+        self.line_edit.cursorPositionChanged.connect(self.cursor_position_changed)
         
         self.setLayout(vbox)
         
@@ -33,6 +34,10 @@ class Widget(QWidget):
     def text_changed(self):
         print("Text changed to ", self.line_edit.text())
         self.text_holder_label.setText(self.line_edit.text())
+        
+    def cursor_position_changed(self, old_position, new_position):
+        print("cursor old position: ", old_position, " -new position: ", new_position)
+        
         
 app = QApplication(sys.argv)
 widget = Widget()
