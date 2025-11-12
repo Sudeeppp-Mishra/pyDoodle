@@ -24,7 +24,8 @@ class Widget(QWidget):
         button.clicked.connect(self.button_clicked)
         #self.line_edit.textChanged.connect(self.text_changed)
         # self.line_edit.cursorPositionChanged.connect(self.cursor_position_changed)
-        self.line_edit.editingFinished.connect(self.editing_finished)
+        # self.line_edit.editingFinished.connect(self.editing_finished)
+        self.line_edit.returnPressed.connect(self.return_pressed)
         
         self.setLayout(vbox)
         
@@ -41,6 +42,9 @@ class Widget(QWidget):
         
     def editing_finished(self): # this triggers after we type enter/return then the signal gets connected to the slot
         print("Editing finished!")
+        
+    def return_pressed(self): # it's kinda same as editing finished and it gets triggered after user presses enter
+        print("Return pressed!")
         
         
 app = QApplication(sys.argv)
