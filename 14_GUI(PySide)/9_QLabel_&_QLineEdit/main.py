@@ -16,6 +16,11 @@ class Widget(QWidget):
         hbox.addWidget(label)
         hbox.addWidget(self.line_edit)
         
+        vbox = QVBoxLayout()
+        vbox.addLayout(hbox)
+        vbox.addWidget(button)
+        vbox.addWidget(self.text_holder_label)
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
