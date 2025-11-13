@@ -6,6 +6,9 @@ class Widget(QWidget):
         super().__init__()
         self.setWindowTitle("QTextEdit")
         
+        self.text_edit = QTextEdit()
+        
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
