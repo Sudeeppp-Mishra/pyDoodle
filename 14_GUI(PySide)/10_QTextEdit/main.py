@@ -9,6 +9,9 @@ class Widget(QWidget):
         self.text_edit = QTextEdit()
         
         # Buttons
+        current_text_button = QPushButton("Current Text")
+        current_text_button.clicked.connect(self.current_text_button_clicked)
+        
         copy_button = QPushButton("Copy")
         copy_button.clicked.connect(self.text_edit.copy)
         
@@ -36,6 +39,7 @@ class Widget(QWidget):
         vbox = QVBoxLayout()
         hbox = QHBoxLayout()
         
+        hbox.addWidget(current_text_button)
         hbox.addWidget(copy_button)
         hbox.addWidget(cut_button)
         hbox.addWidget(paste_button)
@@ -55,6 +59,9 @@ class Widget(QWidget):
     
     def set_html(self):
         pass
+    
+    def current_text_button_clicked(self):
+        print(self.text_edit.toPlainText())
         
 app = QApplication(sys.argv)
 widget = Widget()
