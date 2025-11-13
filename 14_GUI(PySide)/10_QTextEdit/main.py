@@ -8,6 +8,22 @@ class Widget(QWidget):
         
         self.text_edit = QTextEdit()
         
+        # Buttons
+        copy_button = QPushButton("Copy")
+        
+        cut_button = QPushButton("Cut")
+        
+        paste_button = QPushButton("Paste")
+        
+        undo_button = QPushButton("Undo")
+        
+        redo_button = QPushButton("Redo")
+        
+        set_plain_text_button = QPushButton("Set Plain Text")
+        
+        set_html_button = QPushButton("Set HTML")
+        
+        clear_button = QPushButton("Clear")
         
 app = QApplication(sys.argv)
 widget = Widget()
