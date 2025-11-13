@@ -28,7 +28,7 @@ class Widget(QWidget):
         set_plain_text_button.clicked.connect(self.text_edit.set_plain_text)
         
         set_html_button = QPushButton("Set HTML")
-        copy_button.clicked.connect(self.text_edit.set_html)
+        set_html_button.clicked.connect(self.text_edit.set_html)
         
         clear_button = QPushButton("Clear")
         clear_button.clicked.connect(self.text_edit.clear)
