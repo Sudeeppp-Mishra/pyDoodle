@@ -55,10 +55,10 @@ class Widget(QWidget):
         self.setLayout(vbox)
         
     def set_plain_text(self):
-        pass
+        self.text_edit.setPlainText("Wohooooo Wassuppppp???")
     
     def set_html(self):
-        pass
+        self.text_edit.setHtml("<h1>hiiiiiiii</h1><p>Helloo wassup??</p>")
     
     def current_text_button_clicked(self):
         print(self.text_edit.toPlainText())
