@@ -33,6 +33,29 @@ class Widget(QWidget):
         clear_button = QPushButton("Clear")
         clear_button.clicked.connect(self.text_edit.clear)
         
+        vbox = QVBoxLayout()
+        hbox = QHBoxLayout()
+        
+        hbox.addWidget(copy_button)
+        hbox.addWidget(cut_button)
+        hbox.addWidget(paste_button)
+        hbox.addWidget(undo_button)
+        hbox.addWidget(redo_button)
+        hbox.addWidget(set_plain_text_button)
+        hbox.addWidget(set_html_button)
+        hbox.addWidget(clear_button)
+        
+        vbox.addLayout(hbox)
+        vbox.addWidget(self.text_edit)
+        
+        self.setLayout(vbox)
+        
+    def set_plain_text(self):
+        pass
+    
+    def set_html(self):
+        pass
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
