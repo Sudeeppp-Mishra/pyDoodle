@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QWidget, QTextEdit, QPushButton
+from PySide6.QtWidgets import QApplication, QWidget, QTextEdit, QPushButton, QHBoxLayout, QVBoxLayout
 
 class Widget(QWidget):
     def __init__(self):
@@ -16,7 +16,7 @@ class Widget(QWidget):
         cut_button.clicked.connect(self.text_edit.cut)
         
         paste_button = QPushButton("Paste")
-        copy_button.clicked.connect(self.text_edit.paste)
+        paste_button.clicked.connect(self.text_edit.paste)
         
         undo_button = QPushButton("Undo")
         undo_button.clicked.connect(self.text_edit.undo)
