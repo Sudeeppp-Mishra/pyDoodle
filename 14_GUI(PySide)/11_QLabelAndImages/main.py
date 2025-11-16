@@ -8,7 +8,12 @@ class Widget(QWidget):
         self.setWindowTitle("QLable and Images")
         
         image_label = QLabel()
-        image_label.setPixmap(QPixmap("images/nature.jpg"))
+        
+        pixmap = QPixmap("images/nature.jpg")
+        
+        scaled_pixmap = pixmap.scaled(400, 300)
+        
+        image_label.setPixmap(scaled_pixmap)
         
         vbox = QVBoxLayout()
         vbox.addWidget(image_label)
