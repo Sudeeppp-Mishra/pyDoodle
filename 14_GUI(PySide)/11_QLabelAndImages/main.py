@@ -6,6 +6,10 @@ class Widget(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("QLable and Images")
+        
+        image_label = QLabel()
+        image_label.setPixmap(QPixmap("images/nature.jpg"))
+        
     
 app = QApplication(sys.argv)
 widget = Widget()
