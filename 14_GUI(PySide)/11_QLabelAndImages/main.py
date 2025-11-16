@@ -10,6 +10,10 @@ class Widget(QWidget):
         image_label = QLabel()
         image_label.setPixmap(QPixmap("images/nature.jpg"))
         
+        vbox = QVBoxLayout()
+        vbox.addWidget(image_label)
+        
+        self.setLayout(vbox)
     
 app = QApplication(sys.argv)
 widget = Widget()
