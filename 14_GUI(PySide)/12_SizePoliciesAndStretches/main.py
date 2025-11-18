@@ -11,6 +11,9 @@ class Widget(QWidget):
         label = QLabel("Some Text: ")
         line_edit = QLineEdit()
         
+        line_edit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        
         h_layout_1 = QHBoxLayout()
         h_layout_1.addWidget(label)
         h_layout_1.addWidget(line_edit)
