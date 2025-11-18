@@ -26,7 +26,7 @@ class Widget(QWidget):
         # you specify the stretch when you add things to the layout : button_1 takes up 2 units, button_2 and button_3 take up 1 unit
         
         h_layout_2 = QHBoxLayout()
-        h_layout_2.addWidget(button_1, 2)
+        h_layout_2.addWidget(button_1, 2) # as we grow or expand our window button_1 will take 2 units
         h_layout_2.addWidget(button_2, 1)
         h_layout_2.addWidget(button_3, 1)
         
