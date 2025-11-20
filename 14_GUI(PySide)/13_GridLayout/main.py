@@ -14,6 +14,15 @@ class Widget(QWidget):
         button_6 = QPushButton("Six")
         button_7 = QPushButton("Seven")
         
+        grid_layout = QGridLayout()
+        grid_layout.addWidget(button_1, 0, 0)
+        grid_layout.addWidget(button_1, 0, 1, 1, 2) # Take up 1 row and 2 columns
+        grid_layout.addWidget(button_1, 1, 0, 2, 1) # Take up 2 rows and 1 column
+        grid_layout.addWidget(button_1, 1, 1)
+        grid_layout.addWidget(button_1, 1, 2)
+        grid_layout.addWidget(button_1, 2, 1)
+        grid_layout.addWidget(button_1, 2, 2)
+        
 app = QApplication(sys.argv)
 widget = Widget()
 
