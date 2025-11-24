@@ -32,6 +32,7 @@ class Widget(QWidget):
         drink_layout.addWidget(beer)
         drink_layout.addWidget(coffee)
         drink_layout.addWidget(juice)
+        drinks.setLayout(drink_layout)
         
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
