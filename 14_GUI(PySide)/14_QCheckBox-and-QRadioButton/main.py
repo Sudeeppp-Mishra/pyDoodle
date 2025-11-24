@@ -8,10 +8,13 @@ class Widget(QWidget):
         
         os = QGroupBox("Choose Operating Systems")
         windows = QCheckBox("Windows")
+        windows.toggled.connect(self.windows_box_toggled)
         
         linux = QCheckBox("Linux")
+        linux.toggled.connect(self.linux_box_toggled)
         
         mac = QCheckBox("Mac")
+        mac.toggled.connect(self.mac_box_toggled)
         
         os_layout = QVBoxLayout()
         os_layout.addWidget(windows)
