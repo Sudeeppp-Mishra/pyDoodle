@@ -36,6 +36,7 @@ class Widget(QWidget):
         
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
+        main_layout.addWidget(drinks)
         self.setLayout(main_layout)
         
     def windows_box_toggled(self, checked):
