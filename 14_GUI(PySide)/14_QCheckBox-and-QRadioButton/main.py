@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QGroupBox, QCheckBox
+from PySide6.QtWidgets import QApplication, QWidget, QGroupBox, QCheckBox, QVBoxLayout
 import sys
 
 class Widget(QWidget):
@@ -12,6 +12,12 @@ class Widget(QWidget):
         linux = QCheckBox("Linux")
         
         mac = QCheckBox("Mac")
+        
+        os_layout = QVBoxLayout()
+        os_layout.addWidget(windows)
+        os_layout.addWidget(linux)
+        os_layout.addWidget(mac)
+        os.setLayout(os_layout)
         
 app = QApplication(sys.argv)
 widget = Widget()
