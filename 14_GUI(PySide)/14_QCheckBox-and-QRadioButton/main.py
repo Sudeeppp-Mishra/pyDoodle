@@ -47,7 +47,12 @@ class Widget(QWidget):
         answer_b = QRadioButton("B")
         answer_c = QRadioButton("C")
         answer_a.setChecked(True)
-    
+        
+        answer_layout = QVBoxLayout()
+        answer_layout.addWidget(answer_a)
+        answer_layout.addWidget(answer_b)
+        answer_layout.addWidget(answer_c)
+        answers.setLayout(answer_layout)
         
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
