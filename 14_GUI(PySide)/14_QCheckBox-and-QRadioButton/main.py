@@ -26,6 +26,12 @@ class Widget(QWidget):
         main_layout.addWidget(os)
         self.setLayout(main_layout)
         
+    def windows_box_toggled(self, checked):
+        if checked:
+            print("Windows box checked")
+        else:
+            print("Windows box unchecked")
+    
 app = QApplication(sys.argv)
 widget = Widget()
 widget.show()
