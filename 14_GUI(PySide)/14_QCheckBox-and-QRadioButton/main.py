@@ -23,7 +23,9 @@ class Widget(QWidget):
         os.setLayout(os_layout)
         
         drinks = QGroupBox("Choose your drink")
-        
+        beer = QCheckBox("Beer")
+        juice = QCheckBox("Juice")
+        coffee = QCheckBox("Coffee")
         
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
