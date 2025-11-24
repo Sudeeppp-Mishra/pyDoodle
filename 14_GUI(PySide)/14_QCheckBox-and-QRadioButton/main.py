@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QGroupBox, QCheckBox, QVBoxLayout, QButtonGroup
+from PySide6.QtWidgets import QApplication, QWidget, QGroupBox, QCheckBox, QVBoxLayout, QButtonGroup, QRadioButton
 import sys
 
 class Widget(QWidget):
@@ -40,6 +40,14 @@ class Widget(QWidget):
         drink_layout.addWidget(coffee)
         drink_layout.addWidget(juice)
         drinks.setLayout(drink_layout)
+        
+        # Radio Buttons: answers
+        answers = QGroupBox("Choose Answer")
+        answer_a = QRadioButton("A")
+        answer_b = QRadioButton("B")
+        answer_c = QRadioButton("C")
+        answer_a.setChecked(True)
+    
         
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
