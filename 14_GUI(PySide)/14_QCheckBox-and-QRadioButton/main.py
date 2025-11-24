@@ -32,6 +32,12 @@ class Widget(QWidget):
         else:
             print("Windows box unchecked")
     
+    def linux_box_toggled(self, checked):
+        if checked:
+            print("Linux box checked")
+        else:
+            print("Linux box unchecked")
+            
 app = QApplication(sys.argv)
 widget = Widget()
 widget.show()
