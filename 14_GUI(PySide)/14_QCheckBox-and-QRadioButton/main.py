@@ -22,6 +22,9 @@ class Widget(QWidget):
         os_layout.addWidget(mac)
         os.setLayout(os_layout)
         
+        drinks = QGroupBox("Choose your drink")
+        
+        
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
         self.setLayout(main_layout)
