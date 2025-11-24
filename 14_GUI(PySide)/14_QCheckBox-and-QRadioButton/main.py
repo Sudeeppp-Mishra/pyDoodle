@@ -38,6 +38,12 @@ class Widget(QWidget):
         else:
             print("Linux box unchecked")
             
+    def mac_box_toggled(self, checked):
+        if checked:
+            print("Mac box checked")
+        else:
+            print("Mac box unchecked")
+            
 app = QApplication(sys.argv)
 widget = Widget()
 widget.show()
