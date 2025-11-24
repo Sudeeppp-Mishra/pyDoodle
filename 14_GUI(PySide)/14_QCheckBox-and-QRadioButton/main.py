@@ -7,7 +7,11 @@ class Widget(QWidget):
         self.setWindowTitle("QCheckBox and QRadioButton")
         
         os = QGroupBox("Choose Operating Systems")
+        windows = QCheckBox("Windows")
         
+        linux = QCheckBox("Linux")
+        
+        mac = QCheckBox("Mac")
         
 app = QApplication(sys.argv)
 widget = Widget()
