@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QGroupBox, QCheckBox, QVBoxLayout
+from PySide6.QtWidgets import QApplication, QWidget, QGroupBox, QCheckBox, QVBoxLayout, QButtonGroup
 import sys
 
 class Widget(QWidget):
@@ -27,6 +27,13 @@ class Widget(QWidget):
         juice = QCheckBox("Juice")
         coffee = QCheckBox("Coffee")
         beer.setChecked(True)
+        
+        # Make the checkboxes exclusive
+        exclusive_button_group = QButtonGroup(self) # The self parent is needed here
+        exclusive_button_group.addButton(beer)
+        exclusive_button_group.addButton(juice)
+        exclusive_button_group.addButton(coffee)
+        exclusive_button_group.setExclusive(True)
         
         drink_layout = QVBoxLayout()
         drink_layout.addWidget(beer)
