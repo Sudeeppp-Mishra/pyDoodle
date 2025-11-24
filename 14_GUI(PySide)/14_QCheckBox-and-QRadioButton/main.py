@@ -26,6 +26,7 @@ class Widget(QWidget):
         beer = QCheckBox("Beer")
         juice = QCheckBox("Juice")
         coffee = QCheckBox("Coffee")
+        beer.setChecked(True)
         
         main_layout = QVBoxLayout()
         main_layout.addWidget(os)
