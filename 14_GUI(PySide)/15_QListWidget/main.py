@@ -33,6 +33,7 @@ class Widget(QWidget):
         vbox.addWidget(button_delete_item)
         vbox.addWidget(button_item_count)
         vbox.addWidget(button_selected_items)
+        self.setLayout(vbox)
         
     def current_item_changed(self, item):
         print("Current item: ", item.text())
