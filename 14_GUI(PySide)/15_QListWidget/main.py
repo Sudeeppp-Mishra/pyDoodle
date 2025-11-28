@@ -29,6 +29,10 @@ class Widget(QWidget):
         
         vbox = QVBoxLayout()
         vbox.addWidget(self.list_widget)
+        vbox.addWidget(button_add_item)
+        vbox.addWidget(button_delete_item)
+        vbox.addWidget(button_item_count)
+        vbox.addWidget(button_selected_items)
         
     def current_item_changed(self, item):
         print("Current item: ", item.text())
