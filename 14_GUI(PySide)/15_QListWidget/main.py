@@ -5,6 +5,7 @@ class Widget(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("QListWidget")
+        self.setFixedSize(400, 400)
         
         self.list_widget = QListWidget(self)
         self.list_widget.setSelectionMode(QAbstractItemView.MultiSelection)
