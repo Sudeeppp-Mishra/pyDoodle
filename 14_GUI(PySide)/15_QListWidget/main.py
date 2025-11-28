@@ -12,8 +12,17 @@ class Widget(QWidget):
         self.list_widget.addItem("One")
         self.list_widget.addItems(["Two", "Three"])
         
+        self.list_widget.currentItemChanged.connect(self.current_item_changed)
+        self.list_widget.currentTextChanged.connect(self.current_text_changed)
+        
         vbox = QVBoxLayout()
         vbox.addWidget(self.list_widget)
+        
+    def current_item_changed(self, item):
+        print("Current item: ", item.text())
+    
+    def current_text_changed(self, text):
+        print("Current text changed: ", text)
         
 app = QApplication(sys.argv)
 widget = Widget()
