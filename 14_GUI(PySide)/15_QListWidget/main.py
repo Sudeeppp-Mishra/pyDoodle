@@ -41,16 +41,18 @@ class Widget(QWidget):
         print("Current text changed: ", text)
         
     def add_item(self):
-        pass
+        self.list_widget.addItem("New Item")
     
     def delete_item(self):
-        pass
+        print("Item count: ", self.list_widget.count())
     
     def item_count(self):
-        pass
+        self.list_widget.takeItem(self.list_widget.currentRow())
     
     def selected_items(self):
-        pass
+        list = self.list_widget.selectedItems()
+        for i in list:
+            print(i.text())
         
 app = QApplication(sys.argv)
 widget = Widget()
