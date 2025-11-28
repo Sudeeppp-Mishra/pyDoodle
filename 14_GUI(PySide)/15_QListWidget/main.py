@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QWidget, QApplication, QListWidget, QAbstractItemView
+from PySide6.QtWidgets import QWidget, QApplication, QListWidget, QAbstractItemView, QVBoxLayout
 
 class Widget(QWidget):
     def __init__(self):
@@ -11,6 +11,8 @@ class Widget(QWidget):
         self.list_widget.addItem("One")
         self.list_widget.addItems(["Two", "Three"])
         
+        vbox = QVBoxLayout()
+        vbox.addWidget(self.list_widget)
         
 app = QApplication(sys.argv)
 widget = Widget()
