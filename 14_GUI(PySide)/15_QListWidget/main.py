@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QWidget, QApplication
 class Widget(QWidget):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle("QListWidget")
         
 app = QApplication(sys.argv)
 widget = Widget()
