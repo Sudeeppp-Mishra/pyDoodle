@@ -44,10 +44,10 @@ class Widget(QWidget):
     def add_item(self):
         self.list_widget.addItem("New Item")
     
-    def delete_item(self):
+    def item_count(self):
         print("Item count: ", self.list_widget.count())
     
-    def item_count(self):
+    def delete_item(self):
         self.list_widget.takeItem(self.list_widget.currentRow())
     
     def selected_items(self):
