@@ -29,6 +29,11 @@ class Widget(QWidget):
         buttons_layout.addWidget(button_3)
         widget_buttons.setLayout(buttons_layout)
         
+        # Add tabs to widget
+        tab_widget.addTab(widget_form, "Information")
+        tab_widget.addTab(widget_buttons, "Button")
+        
+        
     def button_1_clicked(self):
         pass
 
