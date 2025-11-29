@@ -33,6 +33,10 @@ class Widget(QWidget):
         tab_widget.addTab(widget_form, "Information")
         tab_widget.addTab(widget_buttons, "Button")
         
+        layout = QVBoxLayout()
+        layout.addWidget(tab_widget)
+        
+        self.setLayout(layout)
         
     def button_1_clicked(self):
         pass
