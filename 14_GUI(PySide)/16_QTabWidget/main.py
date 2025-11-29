@@ -39,7 +39,7 @@ class Widget(QWidget):
         self.setLayout(layout)
         
     def button_1_clicked(self):
-        pass
+        print("Button Clicked")
 
 app = QApplication(sys.argv)
 widget = Widget()
