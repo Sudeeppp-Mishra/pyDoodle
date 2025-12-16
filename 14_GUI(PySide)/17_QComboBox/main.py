@@ -33,7 +33,7 @@ class Widget(QWidget):
         print("Current item: ", self.combo_box.currentText(), " - current index: ", self.combo_box.currentIndex())
     
     def set_current(self):
-        pass
+        self.combo_box.setCurrentIndex(2)
     
     def get_values(self):
         pass
