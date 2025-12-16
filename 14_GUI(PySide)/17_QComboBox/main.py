@@ -36,7 +36,8 @@ class Widget(QWidget):
         self.combo_box.setCurrentIndex(2)
     
     def get_values(self):
-        pass
+        for i in range(self.combo_box.count()):
+            print("Index [",i,"]: ", self.combo_box.itemText(i))
     
 app = QApplication(sys.argv)
 widget = Widget()
