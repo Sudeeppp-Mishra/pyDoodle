@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QApplication, QComboBox, QPushButton
+from PySide6.QtWidgets import QWidget, QApplication, QComboBox, QPushButton, QVBoxLayout
 import sys
 
 class Widget(QWidget):
@@ -20,6 +20,14 @@ class Widget(QWidget):
         button_set_current.clicked.connect(self.set_current)
         button_get_values = QPushButton("Get values")
         button_get_values.clicked.connect(self.get_values)
+        
+        vbox = QVBoxLayout()
+        vbox.addWidget(self.combo_box)
+        vbox.addWidget(button_current_value)
+        vbox.addWidget(button_set_current)
+        vbox.addWidget(button_get_values)
+        
+        self.setLayout(vbox)
         
     def current_value(self):
         pass
