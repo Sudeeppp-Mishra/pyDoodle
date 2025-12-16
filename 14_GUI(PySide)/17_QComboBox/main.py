@@ -16,6 +16,8 @@ class Widget(QWidget):
         
         button_current_value = QPushButton("Current Value")
         button_current_value.clicked.connect(self.current_value)
+        button_set_current = QPushButton("Set value")
+        button_set_current.clicked.connect(self.set_current)
         
 app = QApplication(sys.argv)
 widget = Widget()
