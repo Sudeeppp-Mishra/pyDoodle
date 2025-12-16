@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QApplication, QComboBox
+from PySide6.QtWidgets import QWidget, QApplication, QComboBox, QPushButton
 import sys
 
 class Widget(QWidget):
@@ -13,6 +13,9 @@ class Widget(QWidget):
         self.combo_box.addItem("Mars")
         self.combo_box.addItem("Jupiter")
         self.combo_box.addItem("Saturn")
+        
+        button_current_value = QPushButton("Current Value")
+        button_current_value.clicked.connect(self.current_value)
         
 app = QApplication(sys.argv)
 widget = Widget()
