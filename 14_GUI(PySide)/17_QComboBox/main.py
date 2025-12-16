@@ -21,6 +21,15 @@ class Widget(QWidget):
         button_get_values = QPushButton("Get values")
         button_get_values.clicked.connect(self.get_values)
         
+    def current_value(self):
+        pass
+    
+    def set_current(self):
+        pass
+    
+    def get_values(self):
+        pass
+    
 app = QApplication(sys.argv)
 widget = Widget()
 
