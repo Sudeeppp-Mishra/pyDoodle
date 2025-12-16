@@ -30,7 +30,7 @@ class Widget(QWidget):
         self.setLayout(vbox)
         
     def current_value(self):
-        pass
+        print("Current item: ", self.combo_box.currentText(), " - current index: ", self.combo_box.currentIndex())
     
     def set_current(self):
         pass
